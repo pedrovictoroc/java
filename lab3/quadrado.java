@@ -1,5 +1,7 @@
-class Quadrado extends Figura{
+class Quadrado extends Figura implements Colorida{
     float lado;
+    String cor;
+
     Quadrado(float x, float y, float lado){
         super(x, y, "Quadrado");
         this.lado = lado;
@@ -7,6 +9,10 @@ class Quadrado extends Figura{
 
     String desenhar(){
         return super.toString();
+    }
+
+    public void desenhar(String cor){
+        System.out.println(cor);
     }
 
     public void mover(float x, float y){

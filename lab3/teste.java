@@ -1,3 +1,5 @@
+//Pedro Victor Oliveira Carvalho - 417338
+
 class Teste{
     public  static void main(String arg[]){
     //Criação de elementos
@@ -39,5 +41,28 @@ class Teste{
         System.out.println(k);
         float l = f4.calcularArea();
         System.out.println(l);
+
+    //teste cor
+
+    Figura[] arrayFiguras = new Figura[10];
+
+    boolean flag = true;
+    int m;
+    int n;
+    for(m=0;m<10;m++){
+        if(flag==true){
+            arrayFiguras[m] = new Circulo(m,m+1,m+1);
+            flag= false;
+        } else {
+            arrayFiguras[m] = new Quadrado(m,m+1,m+1);
+            flag = true;
+        }
+    }
+
+    for(n=0;n<10;n++){
+        if(arrayFiguras[n] instanceof Colorida){
+            System.out.println("Area do Quadrado: " + arrayFiguras[n].calcularArea());
+        }
+    }
     }
 }
